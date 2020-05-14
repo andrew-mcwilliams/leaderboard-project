@@ -1,0 +1,33 @@
+[
+  {
+    "Action":"SubmitScore",
+    "Username":"test_name",
+    "Score":1234567890,
+    "Timestamp":1588813673
+  },
+  {
+    "Action":"SubmitScore",
+    "Username":"test_name",
+    "Score":1234567892,
+    "Timestamp":1588813680
+  },
+  {
+    "Action":"SubmitScore",
+    "Username":"test_name",
+    "Score":1234567891,
+    "Timestamp":1588813685
+  },
+  {
+    "Action": "GetScores",
+    "Username": "test_name",
+    "Order": "Descending",
+    "TimestampRange":
+    {
+      "TimestampBegin": 1588813670,
+      "TimestampEnd": 1588813690
+    }
+  },
+  {
+    "Action": "ClearScores"
+  }
+]
