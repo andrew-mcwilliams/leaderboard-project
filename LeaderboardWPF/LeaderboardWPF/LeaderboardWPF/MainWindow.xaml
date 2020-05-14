@@ -11,7 +11,8 @@
         Height="{Binding Path=Height, Mode=TwoWay}"
         Width="{Binding Path=Width, Mode=TwoWay}"
         Top="{Binding Path=Top, Mode=TwoWay}"
-        Left="{Binding Path=Left, Mode=TwoWay}">
+        Left="{Binding Path=Left, Mode=TwoWay}"
+        Icon="leaderboard_5U9_icon.ico">
     <etk:BusyIndicator IsBusy="{Binding Path=IsBusy}">
         <Grid>
             <Grid.RowDefinitions>
