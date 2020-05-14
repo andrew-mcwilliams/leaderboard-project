@@ -1,0 +1,1157 @@
+{
+	"info": {
+		"_postman_id": "2c808078-7568-49df-b81b-a0a90984bbab",
+		"name": "Leaderboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SubmitScore",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ffffe56d-67bc-47d2-a2ca-53b96dc95e7a",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\":\"SubmitScore\",\r\n    \"Username\":\"test_name\",\r\n    \"Score\":1234567890,\r\n    \"Timestamp\":1588813673\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6340c163-bcc0-4823-8640-72ccc7cdde8e",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"SubmitScore\",\r\n\t\"Username\":\"test_name\",\r\n\t\"Score\":1234567892,\r\n\t\"Timestamp\":1588813680\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77c5c9b3-5648-432f-bc6f-eb61e5875151",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"SubmitScore\",\r\n\t\"Username\":\"test_name\",\r\n\t\"Score\":1234567891,\r\n\t\"Timestamp\":1588813685\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3c041bef-c7b0-4bef-a413-39a7e981f60d",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"SubmitScore\",\r\n\t\"Username\":\"test_name\",\r\n\t\"Score\":2234567891,\r\n\t\"Timestamp\":1588813700\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eac4a68c-9f1b-4307-9701-f8cd1024ecd2",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"SubmitScore\",\r\n\t\"Username\":\"new_name\",\r\n\t\"Score\":3234567891,\r\n\t\"Timestamp\":1588813800\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore Fails (Duplicate Timestamp)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7975358-e5cb-4113-9a23-a3ce992fd23f",
+						"exec": [
+							"pm.test(\"Response should fail\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(400)\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"Score could not be submitted. A record with a timestamp greater than or equal to 1588813673 already exists.\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\":\"SubmitScore\",\r\n    \"Username\":\"test_name\",\r\n    \"Score\":1234567890,\r\n    \"Timestamp\":1588813673\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore Fails (No Username)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18bec514-77d0-4185-af88-07a9828f2579",
+						"exec": [
+							"pm.test(\"Response should fail\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(400)\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"SubmitScore must provide a Username\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\":\"SubmitScore\",\r\n    \"Score\":1234567890,\r\n    \"Timestamp\":1588813673\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitScore Fails (No Score)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7d26040-47dd-46a2-89fa-9e47152eb431",
+						"exec": [
+							"pm.test(\"Response should fail\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(400)\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"SubmitScore must provide a Score\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\":\"SubmitScore\",\r\n    \"Username\":\"there_no_score\",\r\n    \"Timestamp\":1588813673\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Descending (Timestamp)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "87c87ff2-f63e-4ea7-8ed0-b654523ad33e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(3);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First score is 1234567892\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[0].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[0].Score).to.eql(1234567892);\r",
+							"    pm.expect(jsonData.Scores[0].Timestamp).to.eql(1588813680);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Second score is 1234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[1].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[1].Score).to.eql(1234567891);\r",
+							"    pm.expect(jsonData.Scores[1].Timestamp).to.eql(1588813685);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Third score is 1234567890\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[2].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[2].Score).to.eql(1234567890);\r",
+							"    pm.expect(jsonData.Scores[2].Timestamp).to.eql(1588813673);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Order\": \"Descending\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813670,\r\n      \"TimestampEnd\": 1588813690\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Ascending (Timestamp)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1ec62948-0689-4557-bf70-5a031482841b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(3);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Third score is 1234567892\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[2].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[2].Score).to.eql(1234567892);\r",
+							"    pm.expect(jsonData.Scores[2].Timestamp).to.eql(1588813680);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Second score is 1234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[1].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[1].Score).to.eql(1234567891);\r",
+							"    pm.expect(jsonData.Scores[1].Timestamp).to.eql(1588813685);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First score is 1234567890\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[0].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[0].Score).to.eql(1234567890);\r",
+							"    pm.expect(jsonData.Scores[0].Timestamp).to.eql(1588813673);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Order\": \"Ascending\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813670,\r\n      \"TimestampEnd\": 1588813690\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Descending (With Username)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6310d6a5-1560-4acd-819f-9803fc5b864a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(3);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First score is 1234567892\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[0].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[0].Score).to.eql(1234567892);\r",
+							"    pm.expect(jsonData.Scores[0].Timestamp).to.eql(1588813680);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Second score is 1234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[1].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[1].Score).to.eql(1234567891);\r",
+							"    pm.expect(jsonData.Scores[1].Timestamp).to.eql(1588813685);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Third score is 1234567890\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[2].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[2].Score).to.eql(1234567890);\r",
+							"    pm.expect(jsonData.Scores[2].Timestamp).to.eql(1588813673);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Username\": \"test_name\",\r\n    \"Order\": \"Descending\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813670,\r\n      \"TimestampEnd\": 1588813690\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Descending (Only Order)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "45fc66e3-28a1-429f-8ab3-65b766bbe878",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(5);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First score is 3234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[0].Username).to.eql(\"new_name\");\r",
+							"    pm.expect(jsonData.Scores[0].Score).to.eql(3234567891);\r",
+							"    pm.expect(jsonData.Scores[0].Timestamp).to.eql(1588813800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Second score is 2234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[1].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[1].Score).to.eql(2234567891);\r",
+							"    pm.expect(jsonData.Scores[1].Timestamp).to.eql(1588813700);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Third score is 1234567892\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[2].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[2].Score).to.eql(1234567892);\r",
+							"    pm.expect(jsonData.Scores[2].Timestamp).to.eql(1588813680);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fourth score is 1234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[3].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[3].Score).to.eql(1234567891);\r",
+							"    pm.expect(jsonData.Scores[3].Timestamp).to.eql(1588813685);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fifth score is 1234567890\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[4].Username).to.eql(\"test_name\");\r",
+							"    pm.expect(jsonData.Scores[4].Score).to.eql(1234567890);\r",
+							"    pm.expect(jsonData.Scores[4].Timestamp).to.eql(1588813673);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Order\": \"Descending\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Descending (MaxEntries)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d739b61-e2fc-4813-9772-491980c3ef8b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"First score is 2234567891\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Scores[0].Username).to.eql(\"new_name\");\r",
+							"    pm.expect(jsonData.Scores[0].Score).to.eql(3234567891);\r",
+							"    pm.expect(jsonData.Scores[0].Timestamp).to.eql(1588813800);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Order\": \"Descending\",\r\n    \"MaxEntries\":1\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Fails (Username does not exist)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4024471-8605-4559-b419-b1313f026934",
+						"exec": [
+							"pm.test(\"GetScores fails\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.Scores.length).to.equal(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"No records were found matching the provided parameters.\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Username\": \"does_not_exist\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Fails (MaxEntries <=0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42f3f360-272b-4016-8ce1-a63f6f14b245",
+						"exec": [
+							"pm.test(\"GetScores fails\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.Scores.length).to.equal(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"MaxEntries must be a number greater than zero.\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Username\": \"test_name\",\r\n    \"MaxEntries\": -500\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScores Fails (Malformed Range)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "641235f2-678d-4d05-88e4-01bc14e9821c",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate Error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.Scores.length).to.eql(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"TimestampRange requires both TimestampBegin and TimestampEnd be provided.\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Action\": \"GetScores\",\r\n    \"Username\": \"test_name\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813673\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteScore (Range)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d458344-260d-4cf6-bac3-4230c5ff8a41",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Two were deleted\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(2);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"DeleteScore\",\r\n\t\"Username\":\"test_name\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813673,\r\n      \"TimestampEnd\": 1588813680\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteScore (No Timestamp)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "39330b74-a9f2-4eeb-899b-ef1c6109972f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Two were deleted\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(2);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"DeleteScore\",\r\n\t\"Username\":\"test_name\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteScore Fails (No Username)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11a4eea0-27b8-4951-9de0-d3bf226a7651",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"DeleteScores failed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"DeleteScore must provide a Username\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"DeleteScore\",\r\n    \"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813673,\r\n      \"TimestampEnd\": 1588813680\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteScore Fails (Malformed Range)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1161f45-820a-4916-9111-e976eb979f99",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate Error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"TimestampRange requires both TimestampBegin and TimestampEnd be provided.\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\":\"DeleteScore\",\r\n\t\"Username\":\"test_name\",\r\n\t\"TimestampRange\":\r\n    {\r\n      \"TimestampBegin\": 1588813673\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClearScores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0d58031-0249-4562-9007-77027599236e",
+						"exec": [
+							"pm.test(\"Response should succeed\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.expect(jsonData.Success).to.eql(true);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Action\": \"ClearScores\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClearScores Fails (Nothing to Delete)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "72f5ee3b-f1d8-46a0-b3af-5d61da5ee1a4",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate Error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"No records matched the provided parameters. No records were deleted.\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\": \"ClearScores\",\r\n\t\"TimestampRange\":\r\n\t{\r\n\t  \"TimestampBegin\": 0,\r\n\t  \"TimestampEnd\": 1\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClearScores Fails (Malformed Range)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8d80108-a54d-49de-b6f8-b9db11d57145",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate Error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Success).to.eql(false);\r",
+							"    pm.expect(jsonData.DeletedCount).to.eql(0);\r",
+							"    pm.expect(jsonData.ErrorString).to.eql(\"TimestampRange requires both TimestampBegin and TimestampEnd be provided.\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Action\": \"ClearScores\",\r\n\t\"TimestampRange\":\r\n\t{\r\n\t  \"TimestampBegin\": 0\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
