@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LeaderboardWPF
 {
+	// Class for display a Leaderboard Score retrieved from the server when calling GetScores
     public class LeaderboardScoreViewModel : ViewModelBase
     {
 		private int _score;

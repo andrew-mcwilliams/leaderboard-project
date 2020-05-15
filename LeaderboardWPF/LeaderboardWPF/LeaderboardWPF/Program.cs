@@ -11,6 +11,7 @@ namespace LeaderboardWPF
 {
     public class Program
     {
+
         [STAThread]
         public static void Main()
         {
@@ -18,6 +19,8 @@ namespace LeaderboardWPF
             App.Main();
         }
 
+        // this allows merging the dependencies of the project into the exe
+        // taken from: http://www.digitallycreated.net/Blog/61/combining-multiple-assemblies-into-a-single-exe-for-a-wpf-application
         private static Assembly OnResolveAssembly(object sender, ResolveEventArgs args)
         {
             Assembly executingAssembly = Assembly.GetExecutingAssembly();

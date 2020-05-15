@@ -17,7 +17,7 @@ namespace LeaderboardWPF
     public class TimestampRange
     {
         public long TimestampBegin { get; set; }
-        public long TimestampEnd { get; set; }
+        public long TimestampEnd { get; set; } = long.MaxValue;
     }
 
     public abstract class RequestDefinition

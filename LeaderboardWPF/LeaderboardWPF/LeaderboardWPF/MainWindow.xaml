@@ -17,7 +17,6 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
@@ -26,72 +25,80 @@
                     <MenuItem Header="Load database file..." Command="{Binding Path=Commands.OnLoadDatabaseFile}"/>
                 </MenuItem>
             </Menu>
-            <GroupBox Header="Configuration" Grid.Row="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Label Content="Host:" Grid.Column="0"/>
-                        <TextBox Text="{Binding Path=Host}" Grid.Column="1"/>
-                    </Grid>
-                    <Grid Grid.Column="1">
+            <TabControl Grid.Row="1">
 
-                    </Grid>
-                </Grid>
-            </GroupBox>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <GroupBox Header="API Calls" Grid.Column="0" Grid.Row="1">
-                    <ListBox ItemsSource="{Binding Path=RequestDefinitions}" SelectedItem="{Binding SelectedRequest}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=Action}"/>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </GroupBox>
-                <TabControl Grid.Column="1" Grid.Row="1">
-                    <TabItem Header="Leaderboard">
-                        <DataGrid ItemsSource="{Binding Path=RequestedLeaderboard}" IsReadOnly="True" 
-                                  CanUserAddRows="False" CanUserReorderColumns="True" CanUserDeleteRows="False" 
-                                  AutoGenerateColumns="False">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}"/>
-                                <DataGridTextColumn Header="Score" Binding="{Binding Path=Score}"/>
-                                <DataGridTextColumn Header="Date Achieved" Binding="{Binding Path=DateAchieved}"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </TabItem>
-                    <TabItem Header="Database">
-                        <TextBox IsReadOnly="True" Text="{Binding Path=DatabaseJSON}"/>
-                    </TabItem>
-                </TabControl>
-
-                <GroupBox Header="Server Response" Grid.Column="1" Grid.Row="2">
-                    <TextBox IsReadOnly="True" Text="{Binding Path=ServerResponse}" />
-                </GroupBox>
-                <GroupBox Header="{Binding Path=SelectedRequest.Action}" Grid.Column="0" Grid.Row="2">
+                <TabItem Header="Leaderboard">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <etk:PropertyGrid SelectedObject="{Binding Path=SelectedRequest}"
+                        <GroupBox Header="Configuration" Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Host:" Grid.Column="0"/>
+                                    <TextBox Text="{Binding Path=Host}" Grid.Column="1" VerticalContentAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+
+                                </Grid>
+                            </Grid>
+                        </GroupBox>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <GroupBox Header="API Calls" Grid.Column="0" Grid.Row="1">
+                                <ListBox ItemsSource="{Binding Path=RequestDefinitions}" SelectedItem="{Binding SelectedRequest}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Action}"/>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </GroupBox>
+                            <TabControl Grid.Column="1" Grid.Row="1">
+                                <TabItem Header="Leaderboard">
+                                    <DataGrid ItemsSource="{Binding Path=RequestedLeaderboard}" IsReadOnly="True" 
+                                  CanUserAddRows="False" CanUserReorderColumns="True" CanUserDeleteRows="False" 
+                                  AutoGenerateColumns="False">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}"/>
+                                            <DataGridTextColumn Header="Score" Binding="{Binding Path=Score}"/>
+                                            <DataGridTextColumn Header="Date Achieved" Binding="{Binding Path=DateAchieved}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </TabItem>
+                                <TabItem Header="Database">
+                                    <TextBox IsReadOnly="True" Text="{Binding Path=DatabaseJSON}"/>
+                                </TabItem>
+                            </TabControl>
+
+                            <GroupBox Header="Server Response" Grid.Column="1" Grid.Row="2">
+                                <TextBox IsReadOnly="True" Text="{Binding Path=ServerResponse}" />
+                            </GroupBox>
+                            <GroupBox Header="{Binding Path=SelectedRequest.Action}" Grid.Column="0" Grid.Row="2">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <etk:PropertyGrid SelectedObject="{Binding Path=SelectedRequest}"
                                               ShowHorizontalScrollBar="True"
                                               ShowSummary="False" 
                                               ShowAdvancedOptions="False" 
@@ -99,53 +106,144 @@
                                               ShowSortOptions="False" 
                                               ShowTitle="False"
                                               IsCategorized="False">
-                            <etk:PropertyGrid.EditorDefinitions>
-                                <etk:EditorTemplateDefinition TargetProperties="TimestampRange">
-                                    <etk:EditorTemplateDefinition.EditingTemplate>
-                                        <DataTemplate>
-                                            <Grid>
-                                            </Grid>
-                                        </DataTemplate>
-                                    </etk:EditorTemplateDefinition.EditingTemplate>
-                                </etk:EditorTemplateDefinition>
-                                <etk:EditorTemplateDefinition TargetProperties="Order">
-                                    <etk:EditorTemplateDefinition.EditingTemplate>
-                                        <DataTemplate>
-                                            <ComboBox SelectedValue="{Binding Value}" SelectedValuePath="Content">
-                                                <ComboBoxItem Content=""/>
-                                                <ComboBoxItem Content="Ascending"/>
-                                                <ComboBoxItem Content="Descending"/>
-                                            </ComboBox>
-                                        </DataTemplate>
-                                    </etk:EditorTemplateDefinition.EditingTemplate>
-                                </etk:EditorTemplateDefinition>
-                            </etk:PropertyGrid.EditorDefinitions>
-                        </etk:PropertyGrid>
-                        <Grid Grid.Column="0" Grid.Row="1" Margin="0,5,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Content="Send" MinWidth="75" MinHeight="25" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                        <etk:PropertyGrid.EditorDefinitions>
+                                            <etk:EditorTemplateDefinition TargetProperties="TimestampRange">
+                                                <etk:EditorTemplateDefinition.EditingTemplate>
+                                                    <DataTemplate>
+                                                        <Grid>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </etk:EditorTemplateDefinition.EditingTemplate>
+                                            </etk:EditorTemplateDefinition>
+                                            <etk:EditorTemplateDefinition TargetProperties="Order">
+                                                <etk:EditorTemplateDefinition.EditingTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox SelectedValue="{Binding Value}" SelectedValuePath="Content">
+                                                            <ComboBoxItem Content=""/>
+                                                            <ComboBoxItem Content="Ascending"/>
+                                                            <ComboBoxItem Content="Descending"/>
+                                                        </ComboBox>
+                                                    </DataTemplate>
+                                                </etk:EditorTemplateDefinition.EditingTemplate>
+                                            </etk:EditorTemplateDefinition>
+                                        </etk:PropertyGrid.EditorDefinitions>
+                                    </etk:PropertyGrid>
+                                    <Grid Grid.Column="0" Grid.Row="1" Margin="0,5,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Column="0" Content="Send" MinWidth="75" MinHeight="25" HorizontalAlignment="Center" VerticalAlignment="Center" 
                                         Command="{Binding Path=Commands.OnClickAPISend}"/>
-                            <Button Grid.Column="1" Content="Refresh Database" MinWidth="75" MinHeight="25" 
+                                        <Button Grid.Column="1" Content="Refresh Database" MinWidth="75" MinHeight="25" 
                                     HorizontalAlignment="Center" VerticalAlignment="Center"
                                     Command="{Binding Path=Commands.OnRefreshDatabase}">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="IsEnabled" Value="True"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Path=DatabaseJSON}" Value="{x:Null}">
-                                                <Setter Property="IsEnabled" Value="False"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-                            </Button>
+                                            <Button.Style>
+                                                <Style TargetType="Button">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Path=DatabaseJSON}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </GroupBox>
                         </Grid>
                     </Grid>
-                </GroupBox>
-            </Grid>
+                </TabItem>
+                <TabItem Header="Server">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="Server Configuration" Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="Server Python:"/>
+                                    <TextBox Grid.Column="1" MinWidth="200" Text="{Binding Path=ServerConfig.PythonFile}" VerticalContentAlignment="Center"/>
+                                    <Button Grid.Column="2" MinWidth="20" Content="..." Command="{Binding Path=Commands.OnClickPythonFile}"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                      <Grid.ColumnDefinitions>
+                                          <ColumnDefinition/>
+                                          <ColumnDefinition/>
+                                      </Grid.ColumnDefinitions>
+                                    <Label Content="Host:" Grid.Column="0"/>
+                                    <TextBox Text="{Binding Path=ServerConfig.Host}" MinWidth="100" Grid.Column="1" VerticalContentAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Column="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Port:" Grid.Column="0"/>
+                                    <etk:UIntegerUpDown Value="{Binding Path=ServerConfig.Port}" MinWidth="75" Grid.Column="1"/>
+                                </Grid>
+                                <Grid Grid.Column="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Database File:" Grid.Column="0"/>
+                                    <TextBox Text="{Binding Path=ServerConfig.DatabaseFile}" Grid.Column="1" VerticalContentAlignment="Center"/>
+                                </Grid>
+                                <Button Content="Start Server" Grid.Column="4" Command="{Binding Path=Commands.OnStartServer}" Margin="1">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="IsEnabled" Value="True"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Path=ServerRunning}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                                <Button Content="Stop Server" Grid.Column="5" Command="{Binding Path=Commands.OnStopServer}" Margin="1">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Path=ServerRunning}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Server Output" Grid.Row="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <ListBox ItemsSource="{Binding Path=ServerOutput}" Grid.Row="0"/>
+                                <Button Content="Clear" Grid.Row="1" MinHeight="30" MinWidth="50" HorizontalAlignment="Right" Command="{Binding Path=Commands.OnClearOutput}"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </Grid>
     </etk:BusyIndicator>
 </Window>

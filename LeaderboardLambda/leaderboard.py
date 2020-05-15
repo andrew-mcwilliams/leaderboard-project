@@ -167,6 +167,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Local support of Leaderboard Lambda "server"')
     parser.add_argument('--database_path', type=str, default='database.json',
                         help='Path to the local TinyDB json database')
+    parser.add_argument('--host', type=str, default='localhost')
+    parser.add_argument('--port', type=int, default=8080)
 
     return parser.parse_args()
 
@@ -176,10 +178,6 @@ def initialize_tinydb(database_path):
     # tinydb will just create a new file if it doesn't already exist
     # but in a more realistic scenario we want to point at "the" db, not just any old db we create willy nilly
     return TinyDB(database_path).table('leaderboard')
-
-
-host = "localhost"
-port = 8080
 
 
 class LeaderboardHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -281,6 +279,11 @@ def main():
 
     db = initialize_tinydb(args.database_path)
 
+    host = args.host
+    port = args.port
+
+    # HTTPServer doesn't take an instance of a handler, it takes the class def
+    # this lets the handler to be parameterized and still be used by the server
     handler = partial(LeaderboardHTTPRequestHandler, db)
 
     with HTTPServer((host, port), handler) as httpd:

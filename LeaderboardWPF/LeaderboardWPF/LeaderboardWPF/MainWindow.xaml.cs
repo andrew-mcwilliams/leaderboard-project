@@ -28,9 +28,9 @@ namespace LeaderboardWPF
             InitializeComponent();
         }
 
-        private void ViewModel_OnOpenFileDialog(object sender, ReturnEventArgs<string> e)
+        private void ViewModel_OnOpenFileDialog(object sender, OpenFileReturnEventArgs e)
         {
-            var dialog = new OpenFileDialog() { Filter = "JSON File (.json)|*.json" };
+            var dialog = new OpenFileDialog() { Filter = e.FileFormat };
             if(dialog.ShowDialog() == true)
             {
                 e.Result = dialog.FileName;
